@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="js/modal.js" defer></script>
   </head>
   <body>
     <div class="wrap">
@@ -343,44 +344,10 @@
         </div>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      const swBanner = new Swiper(".sw-banner", {
-        // slidesPerView: 3,
-        // spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
-      // 슬라이드 재생 및 정지
-      const slides = document.querySelectorAll(".sw-banner .swiper-slide");
-      console.log(slides);
-
-      slides.forEach((slide) => {
-        slide.addEventListener("mouseenter", () => {
-          //  console.log("슬라이드 정지!");
-          swBanner.autoplay.stop();
-        });
-
-        slide.addEventListener("mouseleave", () => {
-          //  console.log("슬라이드 시작!");
-          swBanner.autoplay.start();
-        });
-      });
-    </script>
+    <div id="modal">
+   <div class="modal-inner">
+    <p>본 사이트는 스터디 목적으로 제작되었습니다. 문제 발생시 연락 주시면 조치하겠습니다.</p>
+   </div>
     <script src="js/tabMenu.js defer"></script>
   </body>
 </html>
